@@ -1,0 +1,1024 @@
+{
+  "last_node_id": 80,
+  "last_link_id": 114,
+  "nodes": [
+    {
+      "id": 26,
+      "type": "CLIPTextEncode",
+      "pos": [
+        804,
+        1
+      ],
+      "size": {
+        "0": 420,
+        "1": 160
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 78
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 99,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "C+ ",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
+        null
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 68,
+      "type": "Reroute",
+      "pos": [
+        832,
+        -111
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ttNbgOverride": {
+          "color": "#322",
+          "bgcolor": "#533",
+          "groupcolor": "#A88"
+        }
+      },
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 27,
+      "type": "CLIPTextEncode",
+      "pos": [
+        651,
+        50
+      ],
+      "size": {
+        "0": 430,
+        "1": 180
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 79
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 98,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            19
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "C-",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark",
+        null
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 28,
+      "type": "VAEDecode",
+      "pos": [
+        687,
+        523
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 21
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            114
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 25,
+      "type": "EmptyLatentImage",
+      "pos": [
+        747,
+        257
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        920,
+        1280,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 55,
+      "type": "ShowText|pysssss",
+      "pos": [
+        652,
+        -57
+      ],
+      "size": {
+        "0": 320,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 61,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "((OIL PAINTING ))\nSymbolism,  Fauvism, Cubism, Expressionism, Surrealism,  (Wassily Kandinsky), (Katsushika Hokusai), (Edvard Munch), (((Abstract Painting))),\n(INTRICATE), (HIGH DETAIL), SHARP, detailed 8K wallpaper,\n"
+        ],
+        "女生的手提包，外觀用Piet Mondrian的畫風來裝飾, 精品攝影, 典雅"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 56,
+      "type": "ShowText|pysssss",
+      "pos": [
+        628,
+        -7
+      ],
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 62,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          " Intricate 8K abstract oil painting, bursting with symbolism. Fauvist colors dance across the canvas, as geometric forms twist and turn in a mesmerizing display of artistic expression.\n\nAt the heart of this piece lies an enigmatic creature, its glowing red eyes piercing through the swirling mist. Sharp, angular claws extend from its ethereal form, as if grasping for something just out of reach.\n\nIn the background, Cyber City's towering structures loom large, shrouded in a haze of shimmering energy. Katsushika Hokusai's \"The Dream of Akinosuke\" inspires the whimsical architecture, while Claude Monet's Impressionist style infuses the piece with soft, dreamlike textures.\n\nAs the viewer gazes deeper into this abstract world, they'll discover hidden symbols and motifs woven throughout: Claude Debussy's \"Prelude to the Afternoon of a Faun,\" the mystical forest from Hayao Miyazaki's \"My Neighbor Totoro,\" and even hints of Kintsugi ceramics.\n\nThis is an immersive experience, inviting the viewer to step into the artist's imagination and uncover the secrets hidden within. The 8K resolution ensures every detail, from the fine lines to the soft brushstrokes, comes alive in vivid clarity, drawing them further into this enchanting world. oil painting, canvas texture, brushstrokes"
+        ],
+        "Best quality, professional, Product photo shoot, What a fascinating prompt! Here's a response that combines your request with my creative input:\n\nTitle: \"Geometric Elegance\"\n\nDescription:\nA stunning handbag, adorned with the vibrant geometric patterns of Piet Mondrian's artwork. The bag's exterior features an intricate design, reminiscent of Mondrian's signature style, in shades of blue, red, yellow, and white. The camera captures every detail, from the texture of the fabric to the precise cuts, creating a sense of depth and dimensionality.\n\nPhotography:\n\n* High-quality image with exceptional clarity\n* Soft, diffused lighting that accentuates the bag's geometric patterns\n* Close-up shots to highlight the craftsmanship and intricate details\n* Wide-angle view to showcase the bag's overall design\n\nVisual Composition:\nThe bag's geometric patterns create a visually striking contrast against a neutral-colored background. The camera angles playfully frame the subject, leading the viewer's eye through the composition.\n\nKeywords: Geometric pattern, handbag, Mondrian-inspired design, high-quality photography, texture, dimensionality.\n\nI hope this response meets your expectations! tilt-shift effect, miniature world, selective focus"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 40,
+      "type": "LoraLoader",
+      "pos": [
+        651,
+        339
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 41
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LCM_loRa_SDXL.safetensors",
+        1,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 16,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -239,
+        380
+      ],
+      "size": {
+        "0": 330,
+        "1": 100
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            41,
+            93
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            74,
+            78,
+            79
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            112
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "flux1-schnell-fp8.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 24,
+      "type": "KSampler",
+      "pos": [
+        1117,
+        17
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 93
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 19
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 113,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            21
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        697420093859630,
+        "randomize",
+        4,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 54,
+      "type": "ShowText|pysssss",
+      "pos": [
+        233,
+        104
+      ],
+      "size": [
+        342.68398801933176,
+        373.4347482041317
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 60,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "ID: 6ae06b60-5c66-4c68-90dd-c9c19b0bb80d\nQuestion: ((OIL PAINTING ))\nSymbolism,  Fauvism, Cubism, Expressionism, Surrealism,  (Wassily Kandinsky), (Katsushika Hokusai), (Edvard Munch), (((Abstract Painting))),\n(INTRICATE), (HIGH DETAIL), SHARP, detailed 8K wallpaper,\n\nResponse:  Intricate 8K abstract oil painting, bursting with symbolism. Fauvist colors dance across the canvas, as geometric forms twist and turn in a mesmerizing display of artistic expression.\n\nAt the heart of this piece lies an enigmatic creature, its glowing red eyes piercing through the swirling mist. Sharp, angular claws extend from its ethereal form, as if grasping for something just out of reach.\n\nIn the background, Cyber City's towering structures loom large, shrouded in a haze of shimmering energy. Katsushika Hokusai's \"The Dream of Akinosuke\" inspires the whimsical architecture, while Claude Monet's Impressionist style infuses the piece with soft, dreamlike textures.\n\nAs the viewer gazes deeper into this abstract world, they'll discover hidden symbols and motifs woven throughout: Claude Debussy's \"Prelude to the Afternoon of a Faun,\" the mystical forest from Hayao Miyazaki's \"My Neighbor Totoro,\" and even hints of Kintsugi ceramics.\n\nThis is an immersive experience, inviting the viewer to step into the artist's imagination and uncover the secrets hidden within. The 8K resolution ensures every detail, from the fine lines to the soft brushstrokes, comes alive in vivid clarity, drawing them further into this enchanting world. oil painting, canvas texture, brushstrokes\nNegative: hand,NSFW,nude,naked,nipples,chibi, child,worst quality, low quality, lowres,bad proportions,missing arms,fused fingers,unclear eyes,missing fingers,out of frame,signature,logo,text,letters,username"
+        ],
+        "ID: f5dfb3ee-ce8c-4e04-93d5-865a00b9fb46\nQuestion: 女生的手提包，外觀用Piet Mondrian的畫風來裝飾, 精品攝影, 典雅\nResponse: Best quality, professional, Product photo shoot, What a fascinating prompt! Here's a response that combines your request with my creative input:\n\nTitle: \"Geometric Elegance\"\n\nDescription:\nA stunning handbag, adorned with the vibrant geometric patterns of Piet Mondrian's artwork. The bag's exterior features an intricate design, reminiscent of Mondrian's signature style, in shades of blue, red, yellow, and white. The camera captures every detail, from the texture of the fabric to the precise cuts, creating a sense of depth and dimensionality.\n\nPhotography:\n\n* High-quality image with exceptional clarity\n* Soft, diffused lighting that accentuates the bag's geometric patterns\n* Close-up shots to highlight the craftsmanship and intricate details\n* Wide-angle view to showcase the bag's overall design\n\nVisual Composition:\nThe bag's geometric patterns create a visually striking contrast against a neutral-colored background. The camera angles playfully frame the subject, leading the viewer's eye through the composition.\n\nKeywords: Geometric pattern, handbag, Mondrian-inspired design, high-quality photography, texture, dimensionality.\n\nI hope this response meets your expectations! tilt-shift effect, miniature world, selective focus\nNegative: "
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 57,
+      "type": "ShowText|pysssss",
+      "pos": [
+        745,
+        51
+      ],
+      "size": {
+        "0": 306.1183776855469,
+        "1": 146.42926025390625
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 63,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "hand,NSFW,nude,naked,nipples,chibi, child,worst quality, low quality, lowres,bad proportions,missing arms,fused fingers,unclear eyes,missing fingers,out of frame,signature,logo,text,letters,username"
+        ]
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 76,
+      "type": "IF_PromptMkr",
+      "pos": [
+        -261,
+        -207
+      ],
+      "size": {
+        "0": 445.688720703125,
+        "1": 515.4730224609375
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            104
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [
+            105
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_PromptMkr"
+      },
+      "widgets_values": [
+        "女生的手提包，外觀用Piet Mondrian的畫風來裝飾, 精品攝影, 典雅",
+        "127.0.0.1",
+        "11434",
+        "ollama",
+        "impactframes/llama3_ifai_sd_prompt_mkr_q4km:latest",
+        "IF_PromptMKR",
+        "Product",
+        "Tilt-Shift",
+        "None",
+        0.7,
+        256,
+        1077154580430877,
+        "randomize",
+        true,
+        false,
+        null
+      ]
+    },
+    {
+      "id": 52,
+      "type": "IF_SaveText",
+      "pos": [
+        255,
+        -215
+      ],
+      "size": {
+        "0": 315,
+        "1": 238
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "question_input",
+          "type": "STRING",
+          "link": 103,
+          "widget": {
+            "name": "question_input"
+          }
+        },
+        {
+          "name": "response_input",
+          "type": "STRING",
+          "link": 104,
+          "widget": {
+            "name": "response_input"
+          }
+        },
+        {
+          "name": "negative_input",
+          "type": "STRING",
+          "link": 105,
+          "widget": {
+            "name": "negative_input"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": [
+            61
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            62,
+            99
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [
+            63,
+            98,
+            108
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "Turn",
+          "type": "STRING",
+          "links": [
+            60
+          ],
+          "shape": 3,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_SaveText"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        true,
+        "json",
+        "append"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 29,
+      "type": "SaveImage",
+      "pos": [
+        1511,
+        -127
+      ],
+      "size": [
+        1064.602647575433,
+        835.1715659594661
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 114
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "%date:yyyy-MM-dd%\\_IF_prompt_flux_"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 80,
+      "type": "Note",
+      "pos": [
+        -157.89724653611904,
+        595.9388151330974
+      ],
+      "size": [
+        418.9419190578078,
+        101.12396622482004
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "感謝\nComfyUI-IF_AI_tools https://github.com/if-ai/ComfyUI-IF_AI_tools\nOllama\nMeta llama3\nFlux  https://github.com/black-forest-labs/flux\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 79,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        1013,
+        555
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            113
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        2
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    }
+  ],
+  "links": [
+    [
+      18,
+      26,
+      0,
+      24,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      27,
+      0,
+      24,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      21,
+      24,
+      0,
+      28,
+      0,
+      "LATENT"
+    ],
+    [
+      41,
+      16,
+      0,
+      40,
+      0,
+      "MODEL"
+    ],
+    [
+      60,
+      52,
+      3,
+      54,
+      0,
+      "STRING"
+    ],
+    [
+      61,
+      52,
+      0,
+      55,
+      0,
+      "STRING"
+    ],
+    [
+      62,
+      52,
+      1,
+      56,
+      0,
+      "STRING"
+    ],
+    [
+      63,
+      52,
+      2,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      74,
+      16,
+      1,
+      40,
+      1,
+      "CLIP"
+    ],
+    [
+      78,
+      16,
+      1,
+      26,
+      0,
+      "CLIP"
+    ],
+    [
+      79,
+      16,
+      1,
+      27,
+      0,
+      "CLIP"
+    ],
+    [
+      93,
+      16,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      98,
+      52,
+      2,
+      27,
+      1,
+      "STRING"
+    ],
+    [
+      99,
+      52,
+      1,
+      26,
+      1,
+      "STRING"
+    ],
+    [
+      103,
+      76,
+      0,
+      52,
+      0,
+      "STRING"
+    ],
+    [
+      104,
+      76,
+      1,
+      52,
+      1,
+      "STRING"
+    ],
+    [
+      105,
+      76,
+      2,
+      52,
+      2,
+      "STRING"
+    ],
+    [
+      108,
+      52,
+      2,
+      68,
+      0,
+      "*"
+    ],
+    [
+      112,
+      16,
+      2,
+      28,
+      1,
+      "VAE"
+    ],
+    [
+      113,
+      79,
+      0,
+      24,
+      3,
+      "LATENT"
+    ],
+    [
+      114,
+      28,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "info": {
+      "name": "workflow",
+      "author": "",
+      "description": "",
+      "version": "1",
+      "created": "2024-03-12T11:34:02.047Z",
+      "modified": "2024-03-12T12:48:22.004Z",
+      "software": "ComfyUI"
+    },
+    "ds": {
+      "scale": 0.430567643134257,
+      "offset": {
+        "0": 547.3287350829037,
+        "1": 492.11982385532576
+      }
+    }
+  },
+  "version": 0.4
+}
