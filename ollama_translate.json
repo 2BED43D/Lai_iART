@@ -1,0 +1,473 @@
+{
+  "last_node_id": 9,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "IF_PromptMkr",
+      "pos": [
+        195.99996948242188,
+        166.00001525878906
+      ],
+      "size": [
+        445.688720703125,
+        515.4730224609375
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": [
+            3
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            4
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [
+            5
+          ],
+          "slot_index": 2,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_PromptMkr"
+      },
+      "widgets_values": [
+        "Mikayu Kaizaki: Mikayu is a werewolf girl with a fun and happy demeanor. She loves being around people and brings joy and fun to the Cafe. She is the main server in the cafe.\n請依照上面的描述, 寫一篇有關Mikayu Kaizaki的short story",
+        "127.0.0.1",
+        "11434",
+        "ollama",
+        "impactframes/llama3_ifai_sd_prompt_mkr_q4km:latest",
+        "IF_PromptMKR",
+        "None",
+        "None",
+        "None",
+        0.7,
+        256,
+        597691809641706,
+        "randomize",
+        true,
+        false,
+        null
+      ]
+    },
+    {
+      "id": 4,
+      "type": "IF_SaveText",
+      "pos": [
+        686,
+        162.00001525878906
+      ],
+      "size": [
+        315,
+        238
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "question_input",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "question_input"
+          }
+        },
+        {
+          "name": "response_input",
+          "type": "STRING",
+          "link": 4,
+          "widget": {
+            "name": "response_input"
+          }
+        },
+        {
+          "name": "negative_input",
+          "type": "STRING",
+          "link": 5,
+          "widget": {
+            "name": "negative_input"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Question",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "Response",
+          "type": "STRING",
+          "links": [
+            10
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "Negative",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "Turn",
+          "type": "STRING",
+          "links": [
+            1
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IF_SaveText"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        false,
+        "json",
+        "append"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 9,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1206.7056884765625,
+        1056.877685546875
+      ],
+      "size": [
+        460,
+        390
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 11,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 6,
+          "label": "字符串",
+          "localized_name": "字符串",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "該圖像是一位藍色頭髮的年輕女子的肖像。她站在泳池前，背景是棕櫚樹。女子穿著一件海軍藍色西裝外套，裡面是一件白領襯衫，戴著一條帶有紅色吊墜的金項鍊。她手腕上戴著金手鐲，直視鏡頭，眼神迷人。該圖像似乎是 3D 渲染。"
+        ],
+        "該圖像是一位藍色頭髮的年輕女子的肖像。她站在泳池前，背景是棕櫚樹。女子穿著一件海軍藍色西裝外套，裡面是一件白領襯衫，戴著一條帶有紅色吊墜的金項鍊。她手腕上戴著金手鐲，直視鏡頭，眼神迷人。該圖像似乎是 3D 渲染。"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "Save Text File",
+      "pos": [
+        203.99996948242188,
+        913.3333740234375
+      ],
+      "size": [
+        315,
+        202
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 16,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Save Text File"
+      },
+      "widgets_values": [
+        "",
+        "./ComfyUI/output/save_text/[time(%Y-%m-%d)]",
+        "IF_prompt_Mikayu Kaizaki",
+        "_",
+        4,
+        ".txt",
+        "utf-8"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "DeepTranslatorTextNode",
+      "pos": [
+        764.0072021484375,
+        998.81201171875
+      ],
+      "size": [
+        280.37109375,
+        283.2463073730469
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            11
+          ],
+          "slot_index": 0,
+          "label": "文本",
+          "localized_name": "text"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DeepTranslatorTextNode"
+      },
+      "widgets_values": [
+        "auto",
+        "chinese (traditional)",
+        "disable",
+        "",
+        "",
+        "GoogleTranslator [free]",
+        "",
+        "proxy_hide",
+        "authorization_hide",
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 1,
+      "type": "ShowText|pysssss",
+      "pos": [
+        682.3333129882812,
+        481.3333435058594
+      ],
+      "size": [
+        342.6839904785156,
+        373.43475341796875
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            16
+          ],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "ID: fa229d79-fe61-4cc7-8942-d4fba764715c\nQuestion: 插花藝術，高貴典雅，多種花卉及枝葉，合併耶誕節的元素，淺色背景，花器使用金繼藝術的木瓶，產品廣告攝影\n\nResponse: Best quality, professional, Product photo shoot, Luxurious floral arrangement, elegant and refined. \n\nDelicate stems of various flowers, intertwined with festive holiday elements. Soft, pastel colors serve as the backdrop, providing a serene ambiance.\n\nIntricately crafted wooden vase adorned with golden accents, adding an air of sophistication.\n\nProduct advertisement photography showcasing the exquisite craftsmanship, capturing the essence of high-end luxury floral arrangements, perfect for special occasions or corporate events.\n\nKeywords: Luxurious, Elegant, Refined, Delicate, Festive, Holiday Elements, Soft Pastel Colors, Wooden Vase, Golden Accents, High-End Luxury Floral Arrangements. Realistic, detailed, high-resolution, candid, lifelike,\nNegative: "
+        ],
+        "ID: bb089f80-7f6b-457b-b507-75aa815b7a11\nQuestion: Mikayu Kaizaki: Mikayu is a werewolf girl with a fun and happy demeanor. She loves being around people and brings joy and fun to the Cafe. She is the main server in the cafe.\n請依照上面的描述, 寫一篇有關Mikayu Kaizaki的short story\nResponse:  As the sun dipped below the Cyber City's towering structures, casting a warm orange glow over the bustling streets, Mikayu Kaizaki transformed into her werewolf form. Her eyes gleamed with excitement as she bounded through the crowded alleys, her fur fluffed up by the sudden change in temperature.\n\nShe burst through the doors of the cozy cafe, where patrons sipped on steaming cups of coffee and nibbled on sweet treats. The aroma of freshly brewed beans enveloped her, and Mikayu's tail wagged enthusiastically as she took her place behind the counter.\n\nHer coworkers, a diverse group of humans and androids, smiled at her arrival, knowing that her transformation brought an extra burst of energy to their evening shift. As they exchanged greetings, Mikau's ears perked up, picking out snippets of conversation from across the cafe.\n\nThe regulars returned her affectionate waves, while newcomers gazed at her in a mixture of fascination and apprehension. Mikayu lapped up the attention, using her keen senses to read their emotions and tailor her interactions accordingly.\n\nAs the night wore on, Mikayu expertly juggled orders, her quick reflexes allowing her to juggle multiple requests with ease. Her tail wagged occasionally, a subconscious response to the joy she derived from helping others.\n\nWhen the cafe closed its doors, Mikayu reverted to her human form, exhausted but content. She bid her colleagues farewell, promising to return the next evening, already \nNegative: "
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1055.1358642578125,
+        497.2127685546875
+      ],
+      "size": [
+        320,
+        250
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 10,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            12
+          ],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "Best quality, professional, Product photo shoot, Luxurious floral arrangement, elegant and refined. \n\nDelicate stems of various flowers, intertwined with festive holiday elements. Soft, pastel colors serve as the backdrop, providing a serene ambiance.\n\nIntricately crafted wooden vase adorned with golden accents, adding an air of sophistication.\n\nProduct advertisement photography showcasing the exquisite craftsmanship, capturing the essence of high-end luxury floral arrangements, perfect for special occasions or corporate events.\n\nKeywords: Luxurious, Elegant, Refined, Delicate, Festive, Holiday Elements, Soft Pastel Colors, Wooden Vase, Golden Accents, High-End Luxury Floral Arrangements. Realistic, detailed, high-resolution, candid, lifelike,"
+        ],
+        " As the sun dipped below the Cyber City's towering structures, casting a warm orange glow over the bustling streets, Mikayu Kaizaki transformed into her werewolf form. Her eyes gleamed with excitement as she bounded through the crowded alleys, her fur fluffed up by the sudden change in temperature.\n\nShe burst through the doors of the cozy cafe, where patrons sipped on steaming cups of coffee and nibbled on sweet treats. The aroma of freshly brewed beans enveloped her, and Mikayu's tail wagged enthusiastically as she took her place behind the counter.\n\nHer coworkers, a diverse group of humans and androids, smiled at her arrival, knowing that her transformation brought an extra burst of energy to their evening shift. As they exchanged greetings, Mikau's ears perked up, picking out snippets of conversation from across the cafe.\n\nThe regulars returned her affectionate waves, while newcomers gazed at her in a mixture of fascination and apprehension. Mikayu lapped up the attention, using her keen senses to read their emotions and tailor her interactions accordingly.\n\nAs the night wore on, Mikayu expertly juggled orders, her quick reflexes allowing her to juggle multiple requests with ease. Her tail wagged occasionally, a subconscious response to the joy she derived from helping others.\n\nWhen the cafe closed its doors, Mikayu reverted to her human form, exhausted but content. She bid her colleagues farewell, promising to return the next evening, already "
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      3,
+      1,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      3,
+      1,
+      4,
+      1,
+      "STRING"
+    ],
+    [
+      5,
+      3,
+      2,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      10,
+      4,
+      1,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      8,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      2,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      16,
+      1,
+      0,
+      5,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015777,
+      "offset": [
+        65.64949258422806,
+        -182.4651331787098
+      ]
+    }
+  },
+  "version": 0.4
+}
